@@ -5,8 +5,7 @@ pipeline {
       parallel {
         stage('frontend') {
           steps {
-              git(url: 'https://bitbucket.org/romvo/frontend.git', branch: env.BRANCH_NAME, credentialsId: env.BITBUCKET_CREDENTIAL_ID)
-            
+              git(url: 'https://github.com/imangas/jenkins-vue-demo.git', branch: env.BRANCH_NAME, credentialsId: env.GITHUB_CREDENTIAL_ID)
           }
         }
       }
@@ -28,11 +27,10 @@ pipeline {
     }
   }
   environment {
-    BITBUCKET_CREDENTIAL_ID = 'd9c583f6-46a2-463b-8361-27353df4cd90'
     GITHUB_CREDENTIAL_ID = '4742ccd1-e1f1-41ca-8087-ff7d6914d13a'
   }
   options {
-    //skipDefaultCheckout()
+    skipDefaultCheckout()
     disableConcurrentBuilds()
   }
 }
