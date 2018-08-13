@@ -28,7 +28,7 @@ pipeline {
     }
   }
   environment {
-    GITHUB_CREDENTIAL_ID = '4742ccd1-e1f1-41ca-8087-ff7d6914d13a'
+    GITHUB_CREDENTIAL_ID = 'github-nacho'
   }
   options {
     skipDefaultCheckout()
