@@ -5,7 +5,8 @@ pipeline {
       parallel {
         stage('frontend') {
           steps {
-              git(url: 'https://github.com/imangas/jenkins-vue-demo.git', branch: env.BRANCH_NAME, credentialsId: env.GITHUB_CREDENTIAL_ID)
+            echo "downloading"
+            git(url: 'https://github.com/imangas/jenkins-vue-demo.git', branch: env.BRANCH_NAME, credentialsId: env.GITHUB_CREDENTIAL_ID)
           }
         }
       }
