@@ -21,7 +21,8 @@ pipeline {
         }
       }
       steps {
-          sh 'npm install --production'
+          sh 'chmod +x jenkins/scripts/install.sh'
+          sh 'jenkins/scripts/install.sh'
       }
     }
   }
